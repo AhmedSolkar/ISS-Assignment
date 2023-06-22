@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Registration: </legend>
+            <label for="fname">First name:</label>
+            <!-- Take Input from user -->
+            <input type="text" id="fname" name="fname">
+            <br>
+            <br>
+            <label for="gender">Choose a Gender:</label>
+            <!-- Dropdown list for user to select a value -->
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Rather not say">Rather not say</option>
+            </select>
+            <br>
+            <br>
+            <label for="p_languages"> Select Programming Languages : </label>
+            <br>
+            <!-- Checkbox for user to select more than one value -->
+            <select id="p_languages" name="p_languages" multiple>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="HTML">HTML</option>
+                <option value="Bootstrap">Bootstrap</option>
+                <option value="Javascript">Javascript</option>
+            </select>
+
+            <br>
+            <br>
+            <label for="address">Enter your Address:</label>
+            <!-- Multi-line input field -->
+            <textarea id="address" name="address" rows="4" cols="30" style="vertical-align:top">
+            </textarea>
+            <br>
+            <br>
+            <!-- Pre=defined options for input element -->
+            <label for="City">Enter your City :</label>
+            <input list="City">
+            <datalist id="City">
+                <option value="Mumbai">
+                <option value="Delhi">
+                <option value="Hyderabad">
+                <option value="Kolkata">
+                <option value="Chennai">
+                <option value="Chandigarh">
+            </datalist>
+            <br>
+            <br>
+            <button type="submit"> Submit</button>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

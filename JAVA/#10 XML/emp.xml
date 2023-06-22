@@ -1,0 +1,24 @@
+<?xml version="1.0"?>  
+<!DOCTYPE employee SYSTEM "employee.dtd">  
+<employees>
+    <employee> 
+        <firstname>Ahmed</firstname>  
+        <lastname>Solkar</lastname>  
+        <email>ahmedsolkar@gmail.com</email>  
+    </employee>
+    <employee>  
+        <firstname>Tejanshu</firstname>  
+        <lastname>Mistry</lastname>  
+        <email>tejanshu@gmail.com</email>  
+    </employee>   
+    <employee>  
+        <firstname>Vaishnavi</firstname>  
+        <lastname>Sawant</lastname>  
+        <email>vaishnavi@gmail.com</email>  
+    </employee>   
+    <employee>  
+        <firstname>Nishka</firstname>  
+        <lastname>Gosalia</lastname>  
+        <email>nishka@gmail.com</email>  
+    </employee>   
+</employees>

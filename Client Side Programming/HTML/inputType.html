@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <fieldset>
+
+        <label for="Company">Company:</label><br>
+        <input type="text" value="ISS Governance" readonly><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required autofocus><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd" maxlength="25" size="25"> <br> <br>
+        <label> Select your Gender :</label>
+        <input type="radio" id="Male" name="Male" value="Male" />
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="Female" value="Female" />
+        <label for="Female">Female</label>
+        <input type="radio" id="RatherNotSay" name="RatherNotSay" value="Rather Not Say" />
+        <label for="RatherNotSay">Rather Not Say</label>
+
+        <br>
+        <label>Programming Languages:</label>
+        <br>
+        <input type="checkbox" id="Java" name="Java" value="Java">
+        <label for="Java">Java</label><br>
+        <input type="checkbox" id="Python" name="Python" value="Python">
+        <label for="Python">Python</label><br>
+        <input type="checkbox" id="CSS" name="CSS" value="CSS">
+        <label for="CSS">CSS</label><br>
+        <input type="checkbox" id="Javascript" name="Javascript" value="Javascript">
+        <label for="Javascript">Javascript</label><br>
+        <input type="checkbox" id="Bootstrap" name="Bootstrap" value="Bootstrap">
+        <label for="Bootstrap">Bootstrap</label>
+
+        <br>
+        <label for="City">Enter your City :</label>
+        <input list="City">
+        <datalist id="City">
+            <option value="Mumbai">
+            <option value="Delhi">
+            <option value="Hyderabad">
+            <option value="Kolkata">
+            <option value="Chennai">
+            <option value="Chandigarh">
+        </datalist>
+
+        <br>
+        <label for="favColor">Select your Favourite Color :</label>
+        <input type="color" id="favColor" name="favColor" />
+
+        <br>
+        <label for="Birthdate">Select your Birthdate :</label>
+        <input type="date" name="Birthdate" id="Birthdate">
+
+        <br>
+        <label for="joiningMonth">Select your Joining Month :</label>
+        <input type="month" id="joiningMonth" name="joiningMonth">
+
+        <br>
+        <label for="week">Select your Joining Week:</label>
+        <input type="week" id="week" name="week">
+
+        <br>
+        <label for="time">Reporting time:</label>
+        <input type="time" id="time" name="time">
+
+
+        <br>
+        <label for="meetingTime">Schedule a Meeting : </label>
+        <input type="datetime-local" id="meetingTime" name="meetingTime" />
+
+        <br>
+        <label for="email"> Email ID: </label>
+        <input type="email" name="email" id="email" disabled>
+
+        <br>
+        <label for="contactNumber">Contact Number: </label>
+        <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" placeholder="9874563210">
+        <br>
+
+        <br>
+        <label for="linkedinProfile">Enter URL of your LinkedIn Profile:</label>
+        <input type="url" id="linkedinProfile" name="linkedinProfile" autocomplete="on">
+        <br>
+
+        <br>
+        <label for="companyLogo" style="vertical-align: top">Company Logo:</label>
+        <input type="image" id="companyLogo" width="150" height="100" src="ISS.png">
+
+        <br>
+        <label for="profileImage"> Upload your Profile Photo:</label>
+        <input type="file" id="profileImage" name="profileImage" multiple>
+
+        <br>
+        <label for="hiddenMsg"> Hidden Message:</label>
+        <input type="hidden" id="hiddenMsg" name="hiddenMsg">
+
+        <br>
+        <label for="rating">Rating (between 1 and 5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5">
+
+        <br>
+        <label for="Experience">Experience (between 0 and 50):</label>
+        <input type="range" id="Experience" name="Experience" min="0" max="50" step="1">
+
+        <br>
+        <input type="button" value="Normal Button">
+        <input type="submit" /> <input type="reset" />
+    </fieldset>
+</body>
+
+</html>

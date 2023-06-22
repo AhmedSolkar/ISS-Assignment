@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="./registration.css">
+    <ul>
+        <li><a id="registrationMenu" href="#register">Register</a></li>
+        <li><a id="loginMenu" class="active" href="#login">Login</a></li>
+        <li style="float:right; display:none"><a id="logoutBtn" href="#logout">Logout</a></li>
+    </ul>
+
+    <div class=" container" style="display: none;" id="registrationPage">
+        <form id="registrationForm">
+            <h1>Register</h1>
+            <hr>
+
+            <label><b>Name:</b></label>
+            <input type="text" placeholder="Enter Your Name" name="myName" id="myName" required>
+
+            <label><b>Age:</b></label>
+            <input type="number" placeholder="Enter Your Age" name="myAge" id="myAge" required>
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="myEmail" id="myEmail" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="myPassword" id="myPassword" required>
+
+            <label><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="myConfirmPassword" id="myConfirmPassword"
+                required>
+            <hr>
+
+            <button type="submit" class="registerbtn">Register</button>
+        </form>
+    </div>
+    <div class="container" id="loginPage">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <hr>
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="myEmail" id="myEmail" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="myPassword" id="myPassword" required>
+            <hr>
+
+            <button type="submit" class="loginbtn">Login</button>
+        </form>
+
+    </div>
+    <script>
+        document.getElementById("registrationMenu").onclick = function () {
+            document.getElementById("registrationPage").style.display = "block";
+            document.getElementById("loginPage").style.display = "none";
+            document.getElementById("registrationMenu").classList.add("active");
+            document.getElementById("loginMenu").classList.remove("active");
+        }
+
+        document.getElementById("loginMenu").onclick = function () {
+            document.getElementById("loginPage").style.display = "block";
+            document.getElementById("registrationPage").style.display = "none";
+            document.getElementById("loginMenu").classList.add("active");
+            document.getElementById("registrationMenu").classList.remove("active");
+        }
+
+        document.getElementById("registrationForm").onsubmit = function () {
+            if (validateForm()) {
+                alert("Successful");
+            }
+
+            else {
+                return false;
+            }
+        };
+
+        function validateForm() {
+            var name = document.getElementById('myName').value;
+            var regexName = /^[a-zA-Z]{1,}$/;
+            var age = document.getElementById('myAge').value;
+            var regexAge = /^(0?[1-9]|[1-9][0-9])$/;
+            var email = document.getElementById('myEmail').value;
+            var regexEmail = /^[a-zA-Z][0-9a-zA-Z._]{1,}[@][a-zA-Z]{1,}([.])[a-zA-Z]{1,}([.])?[a-zA-z]{1,}$/;
+            var pass = document.getElementById('myPassword').value;
+            var regexPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@._!#$^&*]).{8,}$/;
+            var cfmPass = document.getElementById('myConfirmPassword').value;
+            var regexCfmPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@._!#$^&*]).{8,}$/;
+
+            if (regexName.test(name) == true && regexAge.test(age) == true && regexEmail.test(email) == true && regexPass.test(pass) == true && regexCfmPass.test(cfmPass) == true && pass == cfmPass) {
+                return true;
+            }
+            else {
+                alert("Validation Error!");
+                return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
